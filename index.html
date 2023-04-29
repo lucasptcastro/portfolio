@@ -23,9 +23,9 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">Lucas Peixoto</a>
+      <div class="navbar-responsive">
+        <a href="#" class="logo">Lucas Peixoto</a>
 
-      <nav class="navbar">
         <!-- HAMBURGER MENU -->
         <span
           class="material-symbols-outlined"
@@ -34,7 +34,8 @@
         >
           menu
         </span>
-
+      </div>
+      <nav class="navbar">
         <a href="#" class="active">Início</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
@@ -45,7 +46,9 @@
 
     <hr />
 
+    <!-- HOME -->
     <section class="home">
+      <!-- RESUME -->
       <div class="home-content">
         <div class="home-resume">
           <h1>Olá, sou Lucas!</h1>
@@ -56,6 +59,7 @@
             produzindo trabalhos de qualidade<br />
           </p>
 
+          <!-- CONTACT ME BUTTON -->
           <div class="btn-box">
             <a
               href="https://api.whatsapp.com/send?phone=5584991649669&text=Ol%C3%A1!%20Tudo%20bem%3F"
@@ -65,11 +69,13 @@
           </div>
         </div>
 
+        <!-- AVATAR IMG -->
         <div class="avatar">
           <img src="./assets/profile.png" alt="" />
         </div>
       </div>
 
+      <!-- SOCIAL MEDIAS -->
       <div class="home-sci">
         <a
           href="https://www.linkedin.com/in/lucas-peixoto-2625441a0/"
@@ -89,10 +95,12 @@
     <!-- FUNCTIONS -->
     <script>
       function clickMenu() {
-        if (itens.style.display == "block") {
-          itens.style.display = "none";
+        const navbar = document.querySelector(".navbar");
+
+        if (navbar.style.display == "block") {
+          navbar.style.display = "none";
         } else {
-          itens.style.display = "block";
+          navbar.style.display = "block";
         }
       }
     </script>
