@@ -47,8 +47,8 @@ body {
 
   color: black;
 
+  font-family: "Lilita One", cursive;
   text-decoration: none;
-  font-weight: 600;
 }
 .logo::before {
   content: "";
