@@ -65,6 +65,7 @@ body {
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
 }
+
 .navbar a {
   position: relative;
 
@@ -95,7 +96,7 @@ body {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: white;
 
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
@@ -390,108 +391,104 @@ hr {
 
 /* ===== SMARTPHONES ===== */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  /* HEADER */
-  .header {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #logo-title {
-    text-align: center;
-  }
-
-  #hamburger-menu {
-    display: block;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .header ul {
-    display: flex;
-    flex-direction: column;
-
-    gap: 2rem;
-
-    padding: 1rem 0 2rem 0;
-
-    text-align: center;
-  }
-
-  /* CONTENT */
-  .content {
+  body {
     padding: 0;
     margin: 0;
   }
 
+  /* HEADER */
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-responsive {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+
+    padding: 2rem 0;
+  }
+  .navbar a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .navbar a::before {
+    content: none;
+  }
+  #hamburger-menu {
+    display: block;
+  }
+
+  /* CONTENT */
+  .home {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
   .home-content {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 
-    padding: 2rem 0 0 0;
+    padding: 0 0 0 0;
   }
-
   .home-resume h1 {
-    font-family: "Roboto", sans-serif;
     font-size: 4rem;
 
     text-align: center;
     color: black;
   }
-
   .home-resume h3 {
-    font-family: "Roboto", sans-serif;
-    opacity: 70%;
+    font-size: 2rem;
 
     text-align: center;
     padding: 0 0 1rem 0;
   }
-
   .home-resume p {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
     text-align: center;
-    padding: 0 2rem 1.3rem;
+    padding: 0;
+    margin: 0;
+
     color: black;
   }
+  .btn-box {
+    position: static;
 
-  #btnContact {
-    margin: 0 auto;
+    margin: 2rem auto;
   }
-
   .avatar img {
     height: 36rem;
     width: 36rem;
   }
-
-  footer {
+  .home-sci {
     display: flex;
-    justify-content: center;
-    padding: 5rem 0;
+    position: static;
   }
 }
 
 /* ===== TABLETS ===== */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .navbar {
+  .header {
     display: flex;
-    flex-direction: row;
-
-    width: 100%;
   }
 
-  .header ul {
+  .navbar {
     display: flex;
     flex-direction: row;
   }
@@ -500,22 +497,13 @@ hr {
     display: none;
   }
 
-  nav {
-    display: flex;
-  }
-
   /* CONTENT */
   .home {
     height: 100vh;
-  }
 
-  .content {
     display: flex;
     flex-direction: column;
-
-    padding: 0;
   }
-
   .home-content {
     display: flex;
     flex-direction: column-reverse;
@@ -525,82 +513,80 @@ hr {
 
     padding: 2rem 5rem 1rem;
   }
-
   .home-resume {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-
   .home-resume h1 {
-    font-family: "Roboto", sans-serif;
     font-size: 4rem;
 
     text-align: center;
     color: black;
   }
-
   .home-resume h3 {
-    font-family: "Roboto", sans-serif;
     font-size: 2rem;
     opacity: 70%;
 
     text-align: center;
     padding: 0 0 1rem 0;
   }
-
   .home-resume p {
-    font-family: "Roboto", sans-serif;
     font-size: 1rem;
 
     text-align: center;
     padding: 0 2rem 2rem;
     color: black;
   }
-
   .avatar img {
     width: 35rem;
     height: 35rem;
   }
-
-  #btnContact {
+  .btn-box {
     margin: 3rem auto 0;
   }
-
-  footer {
+  .home-sci {
     display: flex;
-    justify-content: center;
+    position: static;
 
+    justify-content: center;
     margin: 3rem 0 1rem;
   }
 }
 
 /* ===== IPADS ===== */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-  }
+  body {
+    padding: 0;
+    margin: 0;
 
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* HEADER */
+  .header {
+    display: flex;
+  }
   #hamburger-menu {
     display: none;
   }
 
-  nav {
-    display: block;
-  }
+  /* HOME */
+  .home {
+    display: flex;
 
-  .content {
-    padding: 1rem 0;
-    margin: 0;
+    flex-direction: column;
   }
-
   .home-content {
+    padding: 20rem 0 0 0;
+
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
-
   .home-resume {
     display: flex;
     flex-direction: column;
@@ -610,16 +596,25 @@ hr {
   .home-resume h1 {
     font-size: 3.8rem;
   }
+  .home-resume h3 {
+    align-items: center;
 
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+  }
+  .home-resume p {
+    margin: 0 0 3rem 0;
+    padding: 0;
+  }
+  .btn-box {
+    margin: 0 0 3rem 0;
+  }
   .avatar img {
     height: 45rem;
     width: 45rem;
   }
 
-  footer {
-    display: flex;
-    justify-content: center;
-
-    padding: 0;
+  .home-sci {
+    position: static;
   }
 }
