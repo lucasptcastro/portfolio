@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="light">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,10 +23,12 @@
   </head>
   <body>
     <header class="header">
+      <!-- Navbar to the mobile -->
       <div class="navbar-responsive">
+        <!-- Logo -->
         <a href="#" class="logo">Lucas Peixoto</a>
 
-        <!-- HAMBURGER MENU -->
+        <!-- Hamburger menu -->
         <span
           class="material-symbols-outlined"
           id="hamburger-menu"
@@ -35,20 +37,28 @@
           menu
         </span>
       </div>
+
+      <!-- Navbar -->
       <nav class="navbar">
         <a href="#" class="active">Início</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
+
+        <!-- Theme button -->
+        <div class="btn-theme" onclick="changeTheme()">
+          <span class="sun-span"><i class="bx bx-sun"></i></span>
+          <span class="moon-span"><i class="bx bx-moon"></i></span>
+        </div>
       </nav>
     </header>
 
     <hr />
 
-    <!-- HOME -->
+    <!-- Home Session-->
     <section class="home">
-      <!-- RESUME -->
+      <!-- Resume -->
       <div class="home-content">
         <div class="home-resume">
           <h1>Olá, sou Lucas!</h1>
@@ -71,7 +81,7 @@
 
         <!-- AVATAR IMG -->
         <div class="avatar">
-          <img src="./assets/profile.png" alt="" />
+          <img src="./assets/profile_light_avatar.png" alt="" />
         </div>
       </div>
 
@@ -93,16 +103,6 @@
     </section>
 
     <!-- FUNCTIONS -->
-    <script>
-      function clickMenu() {
-        const navbar = document.querySelector(".navbar");
-
-        if (navbar.style.display == "block") {
-          navbar.style.display = "none";
-        } else {
-          navbar.style.display = "block";
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
