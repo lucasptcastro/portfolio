@@ -10,19 +10,24 @@
 }
 
 :root {
-  --tw-gradient-from: #06b6d4;
-  --tw-gradient-to: rgb(6 182 212 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #3b82f6;
+  --text-color: black;
+  --header-bg: white;
+  --text-blue: #3b82f6;
+  --body-bg: #fbfaff;
+}
 
-  --bg-shadow: 100px 100px 10px 10px rgba(0, 0, 0, 0.2);
+.dark {
+  --text-color: white;
+  --header-bg: #081b29;
+  --text-blue: #51cfdf;
+  --body-bg: #081b29;
 }
 
 body {
-  background: #fbfaff;
+  background: var(--body-bg);
 }
 
-/* HEADER */
+/* Header */
 .header {
   position: fixed;
 
@@ -37,15 +42,17 @@ body {
 
   padding: 2rem 10%;
 
-  background: white;
+  background: var(--header-bg);
 
   z-index: 100;
 }
+
+/* Logo */
 .logo {
   position: relative;
   font-size: 2.5rem;
 
-  color: black;
+  color: var(--text-color);
 
   font-family: "Lilita One", cursive;
   text-decoration: none;
@@ -60,12 +67,19 @@ body {
   width: 100%;
   height: 100%;
 
-  background: white;
+  background: var(--header-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+
+  align-items: center;
+  gap: 3.5rem;
+}
 .navbar a {
   position: relative;
 
@@ -74,17 +88,15 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 
-  margin-left: 3.5rem;
-
   transition: 0.3s;
 
-  color: black;
+  color: var(--text-color);
 }
 .navbar a:hover,
 .navbar a.active {
   cursor: pointer;
 
-  color: #3b82f6;
+  color: var(--text-blue);
 }
 .navbar a::before {
   content: "";
@@ -96,7 +108,7 @@ body {
   width: 100%;
   height: 100%;
 
-  background: white;
+  background: var(--header-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
@@ -106,6 +118,35 @@ body {
 #hamburger-menu {
   display: none;
 }
+.btn-theme span {
+  position: relative;
+
+  font-size: 3rem;
+
+  color: var(--text-color);
+}
+.btn-theme span::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--header-bg);
+
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
+
+  z-index: 2;
+}
+.sun-span {
+  display: none;
+}
+
+/* Diviser */
 hr {
   opacity: 30%;
 }
@@ -142,7 +183,7 @@ hr {
 
   line-height: 1.2;
 
-  color: black;
+  color: var(--text-color);
 }
 .home-resume h1::before {
   content: "";
@@ -154,7 +195,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1s;
@@ -164,7 +205,7 @@ hr {
 
   font-size: 3.2rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   padding: 0 0 1rem 0;
 }
@@ -178,7 +219,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.3s;
@@ -191,7 +232,7 @@ hr {
 
   margin: 2rem 0 4rem;
 
-  color: black;
+  color: var(--text-color);
   opacity: 80%;
 }
 .home-resume p::before {
@@ -204,7 +245,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.6s;
@@ -227,7 +268,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.9s;
@@ -246,12 +287,12 @@ hr {
 
   background: transparent;
 
-  border: 2px solid #3b82f6;
+  border: 2px solid var(--text-blue);
   border-radius: 0.8rem;
 
   font-size: 1.9rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   text-decoration: none;
   letter-spacing: 0.1rem;
@@ -274,7 +315,7 @@ hr {
   width: 0;
   height: 100%;
 
-  background: #3b82f6;
+  background: var(--text-blue);
 
   z-index: -1;
 
@@ -304,7 +345,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 2.5s;
@@ -323,11 +364,11 @@ hr {
 
   background: transparent;
 
-  border: 0.2rem solid #3b82f6;
+  border: 0.2rem solid var(--text-blue);
   border-radius: 50%;
 
   font-size: 4rem;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   text-decoration: none;
 
@@ -348,7 +389,7 @@ hr {
   width: 0;
   height: 100%;
 
-  background: #3b82f6;
+  background: var(--text-blue);
   z-index: -1;
 
   transition: 0.5s;
@@ -371,7 +412,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
