@@ -145,16 +145,30 @@ body {
 .sun-span {
   display: none;
 }
+.btn-theme-click span {
+  font-size: 3rem;
+
+  color: var(--text-color);
+}
+.btn-theme-click span::before {
+  content: none;
+}
 
 /* Diviser */
 hr {
   opacity: 30%;
 }
 
-/* HOME SESSION */
+/* Responsibe theme button */
+.responsive-btn-theme {
+  display: none;
+}
+
+/* Home */
 .home {
   display: flex;
 
+  width: 100%;
   height: 100vh;
 
   align-items: center;
@@ -168,7 +182,6 @@ hr {
 
   padding: 0 0;
 
-  width: 100%;
   justify-content: space-between;
 }
 .home-resume {
@@ -233,7 +246,8 @@ hr {
   margin: 2rem 0 4rem;
 
   color: var(--text-color);
-  opacity: 80%;
+
+  width: 50%;
 }
 .home-resume p::before {
   content: "";
@@ -251,7 +265,7 @@ hr {
   animation-delay: 1.6s;
 }
 
-/* CONTACT ME */
+/* Contact-me */
 .home-content .btn-box {
   position: relative;
 
@@ -325,7 +339,7 @@ hr {
   width: 100%;
 }
 
-/* SOCIAL MEDIAS */
+/* Social medias */
 .home-sci {
   position: absolute;
 
@@ -398,7 +412,7 @@ hr {
   width: 100%;
 }
 
-/* AVATAR */
+/* Avatar */
 .avatar {
   position: relative;
 }
@@ -437,11 +451,13 @@ hr {
     margin: 0;
   }
 
-  /* HEADER */
+  /* Header */
   .header {
     display: flex;
     flex-direction: column;
   }
+
+  /* Navbar */
   .navbar-responsive {
     display: flex;
 
@@ -471,9 +487,41 @@ hr {
   }
   #hamburger-menu {
     display: block;
+
+    color: var(--text-color);
+  }
+  .btn-theme {
+    display: none;
   }
 
-  /* CONTENT */
+  /* Responsibe theme button */
+  .responsive-sun-span {
+    display: none;
+  }
+  .responsive-btn-theme {
+    position: fixed;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--text-blue);
+  }
+  .responsive-btn-theme span {
+    font-size: 4rem;
+
+    color: var(--header-bg);
+  }
+
+  /* Home */
   .home {
     display: flex;
     flex-direction: column;
@@ -491,7 +539,7 @@ hr {
     font-size: 4rem;
 
     text-align: center;
-    color: black;
+    color: var(--text-color);
   }
   .home-resume h3 {
     font-size: 2rem;
@@ -506,7 +554,9 @@ hr {
     padding: 0;
     margin: 0;
 
-    color: black;
+    width: 100%;
+
+    color: var(--text-color);
   }
   .btn-box {
     position: static;
@@ -525,20 +575,77 @@ hr {
 
 /* ===== TABLETS ===== */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Header */
   .header {
     display: flex;
+    flex-direction: column;
   }
 
-  .navbar {
+  /* Navbar */
+  .navbar-responsive {
     display: flex;
-    flex-direction: row;
-  }
 
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+
+    padding: 2rem 0;
+  }
+  .navbar a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .navbar a::before {
+    content: none;
+  }
   #hamburger-menu {
+    display: block;
+
+    color: var(--text-color);
+  }
+  .btn-theme {
     display: none;
   }
 
-  /* CONTENT */
+  /* Responsibe theme button */
+  .responsive-sun-span {
+    display: none;
+  }
+  .responsive-btn-theme {
+    position: fixed;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--text-blue);
+  }
+  .responsive-btn-theme span {
+    font-size: 4rem;
+
+    color: var(--header-bg);
+  }
+
+  /* Content */
   .home {
     height: 100vh;
 
@@ -563,35 +670,37 @@ hr {
     font-size: 4rem;
 
     text-align: center;
-    color: black;
+    color: var(--text-color);
   }
   .home-resume h3 {
     font-size: 2rem;
-    opacity: 70%;
 
     text-align: center;
     padding: 0 0 1rem 0;
   }
   .home-resume p {
-    font-size: 1rem;
+    font-size: 2rem;
+
+    margin: 0;
+
+    width: 100%;
 
     text-align: center;
-    padding: 0 2rem 2rem;
-    color: black;
+    color: var(--text-color);
   }
   .avatar img {
     width: 35rem;
     height: 35rem;
   }
   .btn-box {
-    margin: 3rem auto 0;
+    margin: 1rem auto;
   }
   .home-sci {
-    display: flex;
     position: static;
 
+    display: flex;
     justify-content: center;
-    margin: 3rem 0 1rem;
+    gap: 3rem;
   }
 }
 
