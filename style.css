@@ -10,19 +10,24 @@
 }
 
 :root {
-  --tw-gradient-from: #06b6d4;
-  --tw-gradient-to: rgb(6 182 212 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #3b82f6;
+  --text-color: black;
+  --header-bg: white;
+  --text-blue: #3b82f6;
+  --body-bg: #fbfaff;
+}
 
-  --bg-shadow: 100px 100px 10px 10px rgba(0, 0, 0, 0.2);
+.dark {
+  --text-color: white;
+  --header-bg: #081b29;
+  --text-blue: #51cfdf;
+  --body-bg: #081b29;
 }
 
 body {
-  background: #fbfaff;
+  background: var(--body-bg);
 }
 
-/* HEADER */
+/* Header */
 .header {
   position: fixed;
 
@@ -37,15 +42,17 @@ body {
 
   padding: 2rem 10%;
 
-  background: white;
+  background: var(--header-bg);
 
   z-index: 100;
 }
+
+/* Logo */
 .logo {
   position: relative;
   font-size: 2.5rem;
 
-  color: black;
+  color: var(--text-color);
 
   font-family: "Lilita One", cursive;
   text-decoration: none;
@@ -60,12 +67,19 @@ body {
   width: 100%;
   height: 100%;
 
-  background: white;
+  background: var(--header-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+
+  align-items: center;
+  gap: 3.5rem;
+}
 .navbar a {
   position: relative;
 
@@ -74,17 +88,15 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 
-  margin-left: 3.5rem;
-
   transition: 0.3s;
 
-  color: black;
+  color: var(--text-color);
 }
 .navbar a:hover,
 .navbar a.active {
   cursor: pointer;
 
-  color: #3b82f6;
+  color: var(--text-blue);
 }
 .navbar a::before {
   content: "";
@@ -96,7 +108,7 @@ body {
   width: 100%;
   height: 100%;
 
-  background: white;
+  background: var(--header-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
@@ -106,14 +118,57 @@ body {
 #hamburger-menu {
   display: none;
 }
+.btn-theme span {
+  position: relative;
+
+  font-size: 3rem;
+
+  color: var(--text-color);
+}
+.btn-theme span::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--header-bg);
+
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
+
+  z-index: 2;
+}
+.sun-span {
+  display: none;
+}
+.btn-theme-click span {
+  font-size: 3rem;
+
+  color: var(--text-color);
+}
+.btn-theme-click span::before {
+  content: none;
+}
+
+/* Diviser */
 hr {
   opacity: 30%;
 }
 
-/* HOME SESSION */
+/* Responsibe theme button */
+.responsive-btn-theme {
+  display: none;
+}
+
+/* Home */
 .home {
   display: flex;
 
+  width: 100%;
   height: 100vh;
 
   align-items: center;
@@ -127,7 +182,6 @@ hr {
 
   padding: 0 0;
 
-  width: 100%;
   justify-content: space-between;
 }
 .home-resume {
@@ -142,7 +196,7 @@ hr {
 
   line-height: 1.2;
 
-  color: black;
+  color: var(--text-color);
 }
 .home-resume h1::before {
   content: "";
@@ -154,7 +208,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1s;
@@ -164,7 +218,7 @@ hr {
 
   font-size: 3.2rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   padding: 0 0 1rem 0;
 }
@@ -178,7 +232,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.3s;
@@ -191,8 +245,9 @@ hr {
 
   margin: 2rem 0 4rem;
 
-  color: black;
-  opacity: 80%;
+  color: var(--text-color);
+
+  width: 50%;
 }
 .home-resume p::before {
   content: "";
@@ -204,13 +259,13 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.6s;
 }
 
-/* CONTACT ME */
+/* Contact-me */
 .home-content .btn-box {
   position: relative;
 
@@ -227,7 +282,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 1.9s;
@@ -246,12 +301,12 @@ hr {
 
   background: transparent;
 
-  border: 2px solid #3b82f6;
+  border: 2px solid var(--text-blue);
   border-radius: 0.8rem;
 
   font-size: 1.9rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   text-decoration: none;
   letter-spacing: 0.1rem;
@@ -274,7 +329,7 @@ hr {
   width: 0;
   height: 100%;
 
-  background: #3b82f6;
+  background: var(--text-blue);
 
   z-index: -1;
 
@@ -284,7 +339,7 @@ hr {
   width: 100%;
 }
 
-/* SOCIAL MEDIAS */
+/* Social medias */
 .home-sci {
   position: absolute;
 
@@ -304,7 +359,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 2.5s;
@@ -323,11 +378,11 @@ hr {
 
   background: transparent;
 
-  border: 0.2rem solid #3b82f6;
+  border: 0.2rem solid var(--text-blue);
   border-radius: 50%;
 
   font-size: 4rem;
-  color: #3b82f6;
+  color: var(--text-blue);
 
   text-decoration: none;
 
@@ -348,7 +403,7 @@ hr {
   width: 0;
   height: 100%;
 
-  background: #3b82f6;
+  background: var(--text-blue);
   z-index: -1;
 
   transition: 0.5s;
@@ -357,7 +412,7 @@ hr {
   width: 100%;
 }
 
-/* AVATAR */
+/* Avatar */
 .avatar {
   position: relative;
 }
@@ -371,7 +426,7 @@ hr {
   width: 100%;
   height: 100%;
 
-  background: #fbfaff;
+  background: var(--body-bg);
 
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
@@ -396,11 +451,13 @@ hr {
     margin: 0;
   }
 
-  /* HEADER */
+  /* Header */
   .header {
     display: flex;
     flex-direction: column;
   }
+
+  /* Navbar */
   .navbar-responsive {
     display: flex;
 
@@ -430,9 +487,41 @@ hr {
   }
   #hamburger-menu {
     display: block;
+
+    color: var(--text-color);
+  }
+  .btn-theme {
+    display: none;
   }
 
-  /* CONTENT */
+  /* Responsibe theme button */
+  .responsive-sun-span {
+    display: none;
+  }
+  .responsive-btn-theme {
+    position: fixed;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--text-blue);
+  }
+  .responsive-btn-theme span {
+    font-size: 4rem;
+
+    color: var(--header-bg);
+  }
+
+  /* Home */
   .home {
     display: flex;
     flex-direction: column;
@@ -450,7 +539,7 @@ hr {
     font-size: 4rem;
 
     text-align: center;
-    color: black;
+    color: var(--text-color);
   }
   .home-resume h3 {
     font-size: 2rem;
@@ -465,7 +554,9 @@ hr {
     padding: 0;
     margin: 0;
 
-    color: black;
+    width: 100%;
+
+    color: var(--text-color);
   }
   .btn-box {
     position: static;
@@ -484,20 +575,77 @@ hr {
 
 /* ===== TABLETS ===== */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Header */
   .header {
     display: flex;
+    flex-direction: column;
   }
 
-  .navbar {
+  /* Navbar */
+  .navbar-responsive {
     display: flex;
-    flex-direction: row;
-  }
 
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+
+    padding: 2rem 0;
+  }
+  .navbar a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .navbar a::before {
+    content: none;
+  }
   #hamburger-menu {
+    display: block;
+
+    color: var(--text-color);
+  }
+  .btn-theme {
     display: none;
   }
 
-  /* CONTENT */
+  /* Responsibe theme button */
+  .responsive-sun-span {
+    display: none;
+  }
+  .responsive-btn-theme {
+    position: fixed;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--text-blue);
+  }
+  .responsive-btn-theme span {
+    font-size: 4rem;
+
+    color: var(--header-bg);
+  }
+
+  /* Content */
   .home {
     height: 100vh;
 
@@ -522,35 +670,37 @@ hr {
     font-size: 4rem;
 
     text-align: center;
-    color: black;
+    color: var(--text-color);
   }
   .home-resume h3 {
     font-size: 2rem;
-    opacity: 70%;
 
     text-align: center;
     padding: 0 0 1rem 0;
   }
   .home-resume p {
-    font-size: 1rem;
+    font-size: 2rem;
+
+    margin: 0;
+
+    width: 100%;
 
     text-align: center;
-    padding: 0 2rem 2rem;
-    color: black;
+    color: var(--text-color);
   }
   .avatar img {
     width: 35rem;
     height: 35rem;
   }
   .btn-box {
-    margin: 3rem auto 0;
+    margin: 1rem auto;
   }
   .home-sci {
-    display: flex;
     position: static;
 
+    display: flex;
     justify-content: center;
-    margin: 3rem 0 1rem;
+    gap: 3rem;
   }
 }
 
