@@ -14,11 +14,15 @@ function changeTheme() {
   const html = document.documentElement;
   html.classList.toggle("dark");
 
+  const div_theme = document.querySelector(".btn-theme");
+  div_theme.classList.add("btn-theme-click");
+
   const sun_span = document.querySelector(".sun-span");
   const moon_span = document.querySelector(".moon-span");
 
   const img = document.querySelector(".avatar img");
 
+  // Change theme to dark or  light
   if (html.classList.contains("dark")) {
     sun_span.style.display = "block";
     moon_span.style.display = "none";
