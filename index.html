@@ -40,8 +40,8 @@
 
       <!-- Navbar -->
       <nav class="navbar">
-        <a href="#" class="active">Início</a>
-        <a href="#">xxx</a>
+        <a href="#home" class="active">Início</a>
+        <a href="#about">Sobre</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
         <a href="#">xxx</a>
@@ -53,11 +53,16 @@
         </div>
       </nav>
     </header>
-
     <hr />
 
-    <!-- Home Session-->
-    <section class="home">
+    <!-- Mobile Theme button -->
+    <div class="responsive-btn-theme" onclick="changeTheme()">
+      <span class="responsive-sun-span"><i class="bx bx-sun"></i></span>
+      <span class="responsive-moon-span"><i class="bx bx-moon"></i></span>
+    </div>
+
+    <!-- Home Section-->
+    <section class="home" id="home">
       <!-- Resume -->
       <div class="home-content">
         <div class="home-resume">
@@ -99,11 +104,33 @@
           ><i class="bx bxl-instagram"></i
         ></a>
       </div>
+    </section>
 
-      <!-- Mobile Theme button -->
-      <div class="responsive-btn-theme" onclick="changeTheme()">
-        <span class="responsive-sun-span"><i class="bx bx-sun"></i></span>
-        <span class="responsive-moon-span"><i class="bx bx-moon"></i></span>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about">
+        <div class="about-text">
+          <h1 class="h1-about">About</h1>
+          <h1 class="h1-me">Me</h1>
+        </div>
+
+        <!-- Avatar -->
+        <div class="about-avatar">
+          <img src="assets/profile_light_avatar.png" />
+        </div>
+
+        <h3>Full-stack developer</h3>
+        <p>
+          Desenvolvedor júnior responsável por atuar no desenvolvimento
+          front-end, back-end e no gerenciamento de banco de dados. Capacidade
+          de solucionar problemas e sugerir ideias inovadoras.
+          Micro-empreendedor e estudante de empreendedorismo e marketing
+          digital.
+        </p>
+
+        <div class="btn-read-more">
+          <span>Leia mais</span>
+        </div>
       </div>
     </section>
 
