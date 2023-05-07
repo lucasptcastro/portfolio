@@ -168,10 +168,6 @@ hr {
 .responsive-btn-theme {
   display: none;
 }
-/* Sections */
-section {
-  min-height: 100vh;
-}
 
 /* Primary button */
 .btn-box {
@@ -257,6 +253,7 @@ section {
   display: flex;
 
   width: 100%;
+  min-height: 100vh;
 
   align-items: center;
 
@@ -453,6 +450,8 @@ section {
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
+  min-height: 100vh;
+
   padding: 0 10%;
 
   background: var(--secundary-body-bg);
@@ -567,6 +566,8 @@ section {
 
 /* ===== EDUCATION SECTION ===== */
 .education-section {
+  min-height: 100vh;
+
   padding: 0 10%;
 
   background: var(--body-bg);
@@ -665,6 +666,8 @@ section {
 
 /* ===== EXPERIENCE SECTION ===== */
 .experience-section {
+  min-height: 100vh;
+
   padding: 0 10%;
 
   background: var(--secundary-body-bg);
@@ -754,6 +757,9 @@ section {
 
 /* ===== CONTACT-ME SECTION ===== */
 .contact-me-section {
+  min-height: 100vh;
+
+  width: 100%;
   padding: 0 10%;
 
   background: var(--body-bg);
@@ -829,6 +835,44 @@ section {
 }
 .contact-me form .btn-box {
   margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  padding: 2rem 9%;
+
+  background: var(--secundary-body-bg);
+
+  width: 100%;
+}
+.footer-text p {
+  font-size: 1.6rem;
+
+  color: var(--text-color);
+}
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  padding: 0.8rem;
+
+  background: var(--body-bg);
+
+  border: 0.2rem solid var(--text-blue);
+  border-radius: 0.6rem;
+}
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--text-blue);
 }
 
 @keyframes showRight {
@@ -998,6 +1042,15 @@ section {
   .experience-row {
     padding-top: 6rem;
   }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer-text p {
+    font-size: 1rem;
+  }
 }
 
 /* ===== TABLETS ===== */
@@ -1141,6 +1194,11 @@ section {
   .about-avatar img {
     width: 35rem;
     height: 35rem;
+  }
+
+  /* Footer */
+  .footer-text p {
+    font-size: 1rem;
   }
 }
 
