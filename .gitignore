@@ -1,8 +1,2 @@
 .vscode
 .env
-
-# Firebase
-# .firebaserc
-firebase.json
-/.firebase
-/public
