@@ -23,6 +23,8 @@
   --secundary-body-bg: #efefef;
   --shadow-box: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --large-shadow-box: 0 0 #0000, 0 0 #0000, 0 10px 10px -1px rgba(0, 0, 0, 0.1),
+    0 10px 10px -2px rgba(0, 0, 0, 0.1);
 }
 .dark {
   --text-color: white;
@@ -31,8 +33,11 @@
   --body-bg: #081b29;
 
   --secundary-body-bg: #112e42;
-  --shadow-box: 0 0 #fff, 0 0 #fff, 0 4px 6px -1px rgb(255, 255, 255, 0.3),
-    0 2px 4px -2px rgba(255, 255, 255, 0.3);
+  --shadow-box: 0 0 #51cfdf, 0 0 #51cfdf, 0 4px 6px -1px rgb(81, 207, 223, 0.3),
+    0 2px 4px -2px rgb(81, 207, 223, 0.3);
+  --large-shadow-box: 0 0 #fff, 0 0 #fff,
+    0 10px 10px -1px rgb(81, 207, 223, 0.3),
+    0 10px 10px -2px rgb(81, 207, 223, 0.3);
 }
 
 /* Header */
@@ -798,12 +803,10 @@ hr {
   flex-wrap: wrap;
   gap: 5rem;
 
-  padding-top: 5rem;
-}
-.projects-row .projects-column {
-  flex: 1 1 40rem;
+  justify-content: center;
+  width: 100%;
 
-  width: 30vh;
+  padding: 5rem 0 0 0;
 }
 .projects-row .project-card {
   display: flex;
@@ -816,6 +819,14 @@ hr {
   border-radius: 1rem;
 
   box-shadow: var(--shadow-box);
+
+  background: var(--secundary-body-bg);
+
+  width: 50rem;
+}
+.projects-row .project-card:hover {
+  box-shadow: var(--large-shadow-box);
+  cursor: pointer;
 }
 .projects-row .project-card .img-card img {
   border-radius: 1rem;
