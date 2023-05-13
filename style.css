@@ -342,7 +342,7 @@ hr {
 
   color: var(--text-color);
 
-  width: 50%;
+  width: 100%;
 }
 .home-resume p::before {
   content: "";
@@ -453,8 +453,10 @@ hr {
   z-index: 2;
 }
 .avatar img {
-  height: 80rem;
-  width: 80rem;
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -1157,6 +1159,12 @@ hr {
     font-size: 3rem;
   }
 
+  /* ===== CONTACT-ME SECTION ===== */
+  .contact-me .contact-me-text h1 {
+    font-size: 3rem;
+    padding-bottom: 6rem;
+  }
+
   /* Footer */
   .footer {
     flex-direction: column;
@@ -1300,14 +1308,32 @@ hr {
   .about-text .h1-me {
     font-size: 4rem;
   }
-
   .about p {
     padding: 1.5rem 0;
   }
-
   .about-avatar img {
     width: 35rem;
     height: 35rem;
+  }
+
+  /* ===== EDUCATION SECTION ===== */
+  .education .education-text h1 {
+    font-size: 4rem;
+  }
+
+  /* ===== EXPERIENCE SECTION ===== */
+  .experience .experience-text h1 {
+    font-size: 4rem;
+  }
+
+  /* ===== PROJECS SECTION ===== */
+  .projects .projects-text h1 {
+    font-size: 4rem;
+  }
+  /* ===== PROJECS SECTION ===== */
+  .contact-me .contact-me-text h1 {
+    font-size: 4rem;
+    padding-bottom: 5rem;
   }
 
   /* Footer */
@@ -1328,9 +1354,74 @@ hr {
     align-items: center;
   }
 
+  /* Header */
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Navbar */
-  #hamburger-menu {
+  .navbar-responsive {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+  .navbar {
     display: none;
+    flex-direction: column;
+
+    padding: 2rem 0;
+  }
+  .navbar a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .navbar a::before {
+    content: none;
+  }
+  #hamburger-menu {
+    display: block;
+
+    color: var(--text-color);
+  }
+  .btn-theme {
+    display: none;
+  }
+
+  /* Responsibe theme button */
+  .responsive-sun-span {
+    display: none;
+  }
+  .responsive-btn-theme {
+    position: fixed;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--text-blue);
+  }
+  .responsive-btn-theme span {
+    font-size: 4rem;
+
+    color: var(--header-bg);
   }
 
   /* ===== HOME SECTION ===== */
@@ -1399,9 +1490,13 @@ hr {
     padding: 2rem 0;
     width: 100%;
   }
-
   .about-avatar img {
     height: 60rem;
     width: 60rem;
+  }
+
+  /* ===== PROJECTS SECTION =====*/
+  .projects-section {
+    width: 100%;
   }
 }
