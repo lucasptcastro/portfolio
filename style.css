@@ -828,6 +828,9 @@ hr {
   box-shadow: var(--large-shadow-box);
   cursor: pointer;
 }
+.projects-row .project-card a {
+  text-decoration: none;
+}
 .projects-row .project-card .img-card img {
   border-radius: 1rem;
 
