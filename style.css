@@ -880,6 +880,8 @@ hr {
   align-items: center;
 
   padding: 10rem 0 0;
+
+  gap: 6rem;
 }
 .contact-me-text {
   display: flex;
@@ -1162,7 +1164,6 @@ hr {
   /* ===== CONTACT-ME SECTION ===== */
   .contact-me .contact-me-text h1 {
     font-size: 3rem;
-    padding-bottom: 6rem;
   }
 
   /* Footer */
@@ -1330,10 +1331,10 @@ hr {
   .projects .projects-text h1 {
     font-size: 4rem;
   }
+
   /* ===== PROJECS SECTION ===== */
   .contact-me .contact-me-text h1 {
     font-size: 4rem;
-    padding-bottom: 5rem;
   }
 
   /* Footer */
